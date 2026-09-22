@@ -1,5 +1,4 @@
-# Oracle Database Lab
-Training repository for Oracle Database administration, testing, change management and Git workflows.
-
-Name: Francisco de Borja Nguema Okue
+# Oracle Database Lab - Main Edition
+Training repository for Oracle Database administration.
+Name: Francisco de Borja Nguema
 Professor: Richard Aviles Lopez
