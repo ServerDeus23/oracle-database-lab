@@ -5,4 +5,5 @@ Professor: Richard Aviles Lopez
 
 Collaborators: Mauricio Sogamoso
 
-See CONTRIBUTING.md for branch and commit conventions.
+See CONTRIBUTING.md for branch and commit conventions
+
