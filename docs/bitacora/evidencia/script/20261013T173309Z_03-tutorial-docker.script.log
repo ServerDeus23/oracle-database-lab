@@ -1,0 +1,160 @@
+Script started on 2026-10-13 19:33:09+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="127" LINES="45"]
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7m# G1: Cliente y Servidor[27m
+[7mdocker version[27m
+[7mdocker info[27m[A[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ # G1: Cliente y Servidor
+docker version
+docker info
+[?2004lClient:
+ Version:           29.1.3
+ API version:       1.52
+ Go version:        go1.24.4
+ Git commit:        29.1.3-0ubuntu3~24.04.2
+ Built:             Wed Apr 29 16:41:06 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server:
+ Engine:
+  Version:          29.1.3
+  API version:      1.52 (minimum version 1.44)
+  Go version:       go1.24.4
+  Git commit:       29.1.3-0ubuntu3~24.04.2
+  Built:            Wed Apr 29 16:41:06 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          2.2.1
+  GitCommit:        
+ runc:
+  Version:          1.3.4-0ubuntu1~24.04.1
+  GitCommit:        
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        
+Client:
+ Version:    29.1.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  trust: Manage trust on Docker images (Docker Inc.)
+    Version:  29.1.3
+    Path:     /usr/libexec/docker/cli-plugins/docker-trust
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 12
+ Server Version: 29.1.3
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 1
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 
+ runc version: 
+ init version: 
+ Security Options:
+  seccomp
+   Profile: builtin
+ Kernel Version: 5.15.167.4-microsoft-standard-WSL2
+ Operating System: Ubuntu 24.04.5 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 3.368GiB
+ Name: ServerDeus
+ ID: 09cbe4ab-a9c6-4317-a4c4-a96976937c2c
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+  ::1/128
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+WARNING: No blkio throttle.read_bps_device support
+WARNING: No blkio throttle.write_bps_device support
+WARNING: No blkio throttle.read_iops_device support
+WARNING: No blkio throttle.write_iops_device support
+WARNING: Support for cgroup v1 is deprecated and planned to be removed by no later than May 2029 (https://github.com/moby/moby/issues/51111)
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7mdocker run hello-world[27m
+[7mdocker ps -a[27m[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ docker run hello-world
+docker ps -a
+[?2004l
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+CONTAINER ID   IMAGE         COMMAND    CREATED         STATUS                              PORTS     NAMES
+cb911123a0c7   hello-world   "/hello"   2 seconds ago   Exited (0) Less than a second ago             intelligent_sammet
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7mdocker pull alpine:3.20[27m
+[7mdocker images[27m[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ docker pull alpine:3.20
+docker images
+[?2004l3.20: Pulling from library/alpine
+
+[1A[2K25f1d6b1951a: Pulling fs layer [1B[1A[2K25f1d6b1951a: Downloading [==============>                                    ]  1.049MB/3.63MB[1B[1A[2K25f1d6b1951a: Downloading [===========================================>       ]  3.146MB/3.63MB[1B[1A[2K25f1d6b1951a: Download complete [1B[1A[2K25f1d6b1951a: Extracting 1 s[1B[1A[2K25f1d6b1951a: Extracting 1 s[1B
+[1A[2K3a030ca3f633: Download complete [1B
+[1A[2Kd4050d56ebf2: Download complete [1B[3A[2K25f1d6b1951a: Extracting 1 s[3B[3A[2K25f1d6b1951a: Extracting 1 s[3B[3A[2K25f1d6b1951a: Extracting 1 s[3B[3A[2K25f1d6b1951a: Extracting 1 s[3B[3A[2K25f1d6b1951a: Pull complete [3BDigest: sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc
+Status: Downloaded newer image for alpine:3.20
+docker.io/library/alpine:3.20
+                                                                                                           [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                 [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1malpine:3.20[0m           [39md9e853e87e55[0m       [39m12.2MB[0m         [39m3.71MB[0m        
+[34m[1mhello-world:latest[0m    [39m5e2309035332[0m       [39m25.9kB[0m         [39m9.49kB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mpipeline-tfg:latest[0m   [39mbcc7f2e91272[0m       [39m1.79GB[0m          [39m488MB[0m        
+[34m[1mubuntu:22.04[0m          [39m4f838adc7181[0m        [39m119MB[0m         [39m31.7MB[0m        
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7m# G4: Entrar en el contenedor[27m
+[7mdocker run -it --name prueba alpine:3.20 sh[27m[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ # G4: Entrar en el contenedor
+docker run -it --name prueba alpine:3.20 sh
+[?2004l/ # [6ncat /etc/os-release
+NAME="Alpine Linux"
+ID=alpine
+VERSION_ID=3.20.10
+PRETTY_NAME="Alpine Linux v3.20"
+HOME_URL="https://alpinelinux.org/"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+/ # exit
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7m# G5: Sistema de archivos efímero[27m
+[7mdocker start -ai prueba[27m
+[7mecho "dato importante" > /tmp/nota.txt[27m
+[7mexit[27m
+[7mdocker rm prueba[27m[A[A[A[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ # G5: Sistema de archivos efímero
+docker start -ai prueba
+echo "dato importante" > /tmp/nota.txt
+exit
+docker rm prueba
+[?2004l/ # [6nexit
+exit
+
+Script done on 2026-10-13 19:48:56+02:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,19 @@
+Script started on 2026-10-13 21:18:38+02:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="127" LINES="45"]
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7msource scripts/deployment/env/00-config.sh[27m
+[7mdocker logs --tail 30 "$ORACLE_CONTAINER_NAME"[27m
+[7mdocker ps -f "name=$ORACLE_CONTAINER_NAME"[27m[A[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ source scripts/deployment/env/00-config.sh
+docker logs --tail 30 "$ORACLE_CONTAINER_NAME"
+docker ps -f "name=$ORACLE_CONTAINER_NAME"
+[?2004linvalid container name or ID: value is empty
+CONTAINER ID   IMAGE                                                COMMAND                  CREATED          STATUS                    PORTS                                                                                      NAMES
+4ea81b72f63c   container-registry.oracle.com/database/free:latest   "/bin/bash -c $SCRIP…"   48 minutes ago   Up 46 minutes (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp, 0.0.0.0:5500->5500/tcp, [::]:5500->5500/tcp   funny_tu
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7mexit[27m
+[7mgit add docs/bitacora/evidencia/script/*_06-check-oracle-status.script.log[27m
+[7mgit commit -m "chore(deploy): verify Oracle container health status[27m
+[7mRefs #3"[27m[A[A[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ exit
+git add docs/bitacora/evidencia/script/*_06-check-oracle-status.script.log
+git commit -m "chore(deploy): verify Oracle container health status
+Refs #3"
+[?2004lexit
+
+Script done on 2026-10-13 21:21:41+02:00 [COMMAND_EXIT_CODE="0"]

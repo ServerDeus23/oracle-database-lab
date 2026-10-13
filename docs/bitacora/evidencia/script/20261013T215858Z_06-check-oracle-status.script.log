@@ -1,0 +1,32 @@
+Script started on 2026-10-13 21:58:59+02:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="127" LINES="45"]
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7m# 3. Consultar logs y estado del contenedor[27m 
+[7mdocker logs --tail 20 "$ORACLE_CONTAINER_NAME"[27m
+[7mdocker ps -f "name=$ORACLE_CONTAINER_NAME"[27m[A[A[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ # 3. Consultar logs y estado del contenedor 
+docker logs --tail 20 "$ORACLE_CONTAINER_NAME"
+docker ps -f "name=$ORACLE_CONTAINER_NAME"
+[?2004lSQL> Disconnected from Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+#########################
+DATABASE IS READY TO USE!
+#########################
+The following output is now a tail of the alert.log:
+2026-10-13T19:44:56.704763+00:00
+FREEPDB1(3):Opening pdb with Resource Manager plan: DEFAULT_PLAN
+Completed: Pluggable database FREEPDB1 opened read write 
+Completed: ALTER DATABASE OPEN
+2026-10-13T19:45:03.325400+00:00
+===========================================================
+Dumping current patch information
+===========================================================
+No patches have been applied
+===========================================================
+2026-10-13T19:45:11.793190+00:00
+TABLE SYS.WRP$_REPORTS: ADDED AUTOLIST FRAGMENT SYS_P656 (3) VALUES (( 1509902213, TO_DATE(' 2026-10-12 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
+TABLE SYS.WRP$_REPORTS_DETAILS: ADDED AUTOLIST FRAGMENT SYS_P657 (3) VALUES (( 1509902213, TO_DATE(' 2026-10-12 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
+TABLE SYS.WRP$_REPORTS_TIME_BANDS: ADDED AUTOLIST FRAGMENT SYS_P660 (3) VALUES (( 1509902213, TO_DATE(' 2026-10-12 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
+CONTAINER ID   IMAGE                                                COMMAND                  CREATED          STATUS                    PORTS                                                                                      NAMES
+1bbe8108f664   container-registry.oracle.com/database/free:latest   "/bin/bash -c $SCRIP…"   15 minutes ago   Up 15 minutes (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp, 0.0.0.0:5500->5500/tcp, [::]:5500->5500/tcp   oracle-26ai
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ exit
+[?2004lexit
+
+Script done on 2026-10-13 22:01:13+02:00 [COMMAND_EXIT_CODE="0"]
