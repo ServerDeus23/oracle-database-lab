@@ -1,0 +1,34 @@
+Script started on 2026-10-13 22:01:52+02:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="127" LINES="45"]
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7mdocker exec -it oracle-26ai sqlplus sys/"$O[27m[7mR[27m[7mACLE_PWD"@//localhost:1521/FREEPDB1 as sysdba[27m[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ docker exec -it oracle-26ai sqlplus sys/"$ORACLE_PWD"@//localhost:1521/FREEPDB1 as sysdba
+[?2004l
+SQL*Plus: Release 23.26.3.0.0 - Production on Tue Oct 13 20:02:28 2026
+Version 23.26.3.0.0
+
+Copyright (c) 1982, 2026, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+
+SQL> SELECT user, sysdate FROM dual;
+EXIT;
+USER
+--------------------------------------------------------------------------------
+SYSDATE
+---------
+SYS
+13-OCT-26
+
+
+SQL> exit
+SP2-0584: EXIT variable ";exit" was non-numeric
+Help: https://docs.oracle.com/error-help/db/sp2-0584/
+Usage: { EXIT | QUIT }	[ SUCCESS | FAILURE | WARNING | n |
+       <variable> | :<bindvariable> ]  [ COMMIT | ROLLBACK ]
+Disconnected from Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ exit
+[?2004lexit
+
+Script done on 2026-10-13 22:03:10+02:00 [COMMAND_EXIT_CODE="1"]
