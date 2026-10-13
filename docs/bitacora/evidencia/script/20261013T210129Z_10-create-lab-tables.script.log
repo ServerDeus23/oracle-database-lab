@@ -1,0 +1,46 @@
+Script started on 2026-10-13 23:01:29+02:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="127" LINES="45"]
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7mdocker exec -it oracle-26ai sqlplus lab_use[27m[7mr[27m[7m/LabPassword26ai@FREEPDB1[27m[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ docker exec -it oracle-26ai sqlplus lab_user/LabPassword26ai@FREEPDB1
+[?2004l
+SQL*Plus: Release 23.26.3.0.0 - Production on Tue Oct 13 21:03:03 2026
+Version 23.26.3.0.0
+
+Copyright (c) 1982, 2026, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Oct 13 2026 20:59:42 +00:00
+
+Connected to:
+Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+
+SQL> 
+SQL> SHOW USER;
+SELECUSER is "LAB_USER"
+SQL> T sys_context('USERENV', 'CON_NAME') FROM dual;
+EXIT;
+SYS_CONTEXT('USERENV','CON_NAME')
+--------------------------------------------------------------------------------
+FREEPDB1
+
+SQL> exit
+SP2-0584: EXIT variable ";exit" was non-numeric
+Help: https://docs.oracle.com/error-help/db/sp2-0584/
+Usage: { EXIT | QUIT }	[ SUCCESS | FAILURE | WARNING | n |
+       <variable> | :<bindvariable> ]  [ COMMIT | ROLLBACK ]
+Disconnected from Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7m# 1. Detener el script de log[27m
+[7mexit[27m
+
+[7m# 2. Registrar la evidencia en Git[27m
+[7mgit add docs/bitacora/evidencia/script/*[27m
+[7mgit commit -m "test(auth): verify lab_user authentication and pdba session context[27m
+[7mRefs #3"[27m[A[A[A[A[A[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ # 1. Detener el script de log
+exit
+
+# 2. Registrar la evidencia en Git
+git add docs/bitacora/evidencia/script/*
+git commit -m "test(auth): verify lab_user authentication and pdba session context
+Refs #3"
+[?2004lexit
+
+Script done on 2026-10-13 23:04:18+02:00 [COMMAND_EXIT_CODE="1"]
