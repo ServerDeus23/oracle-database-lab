@@ -1,0 +1,70 @@
+Script started on 2026-10-13 22:53:02+02:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="127" LINES="45"]
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7mdocker exec -it oracle-26ai sqlplus sys/Ora[27m[7mc[27m[7mle26aiFree@FREEPDB1 as sysdba[27m[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ docker exec -it oracle-26ai sqlplus sys/Oracle26aiFree@FREEPDB1 as sysdba
+[?2004l
+SQL*Plus: Release 23.26.3.0.0 - Production on Tue Oct 13 20:53:20 2026
+Version 23.26.3.0.0
+
+Copyright (c) 1982, 2026, Oracle.  All rights reserved.
+
+ERROR:
+ORA-01017: invalid credential or not authorized; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+
+
+Enter user-name: sdsd
+Enter password: 
+ERROR:
+ORA-01017: invalid credential or not authorized; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+
+
+Enter user-name: 
+ERROR:
+ORA-01017: invalid credential or not authorized; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+
+
+SP2-0157: unable to CONNECT to ORACLE after 3 attempts, exiting SQL*Plus
+Help: https://docs.oracle.com/error-help/db/sp2-0157/
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ [7mdocker exec -it oracle-26ai sqlplus / as sy[27m[7ms[27m[7mdba[27m[A(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ docker exec -it oracle-26ai sqlplus / as sysdba
+[?2004l
+SQL*Plus: Release 23.26.3.0.0 - Production on Tue Oct 13 20:54:50 2026
+Version 23.26.3.0.0
+
+Copyright (c) 1982, 2026, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+
+SQL> ALTER SESSION SET CONTAINER = FREEPDB1;
+
+Session altered.
+
+SQL> CREATE USER lab_user IDENTIFIED BY LabPassword26ai;
+GRANT CONNECT, RESOURCE, DBA TO lab_user;
+ALTER USER lab_user QUOTA UNLIMITED ON USERS;
+User created.
+
+SQL> 
+Grant succeeded.
+
+SQL> exit
+  2  
+SQL> 
+SQL> ^C
+
+SQL> ^C
+
+SQL> ^C
+
+SQL> ^C
+
+SQL> exit
+Disconnected from Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+[?2004h(base) ]0;borja@ServerDeus: /mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[01;32mborja@ServerDeus[00m:[01;34m/mnt/c/Users/fborj/OneDrive/Documentos/oracle-database-lab[00m$ exit
+[?2004lexit
+
+Script done on 2026-10-13 22:56:53+02:00 [COMMAND_EXIT_CODE="0"]
